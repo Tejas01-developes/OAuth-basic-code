@@ -7,9 +7,9 @@ import {db} from '../Connections/mysql.js';
 passport.use(
     new GoogleStrategy(
         {
-            clientID:process.env.CLIENT_ID,
-            clientSecret:process.env.CLIENT_SECRET,
-            callbackURL:process.env.GOOGLE_CALLBACK,
+            clientID:process.env.GOOGLE_CLIENT_ID,
+            clientSecret:process.env.GOOGLE_CLIENT_SECRET,
+            callbackURL:process.env.GOOGLE_REDIRECT_URI,
         },
         
         async (accesstoken,refreshtoken,profile,done)=>{
